@@ -263,7 +263,7 @@ matrix:
     before_script:
       - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
       - cd kitchen-tests
-      - git clone https://github.com/learn-chef/awesome_customers_ubuntu cookbooks
+      - git clone https://github.com/learn-chef/awesome_customers_ubuntu cookbooks/awesome_customers_ubuntu
     script:
       - bundle exec kitchen test fedora-23
     after_failure:
